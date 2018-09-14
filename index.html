@@ -3,22 +3,91 @@
   <head>
     <meta charset="UTF-8">
     <title>My First CRUD App</title>
-    <link rel="stylesheet" href="app.css">
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous">
+    <script src="https://unpkg.com/ionicons@4.4.2/dist/ionicons.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 
   </head>
   <body>
+    <header class="header">
+      <nav id="nav-bar-main">
+        <ul id="main-nav-bar-items"> 
+          <li class="main-nav-bar-items"><ion-icon name="Home"></ion-icon>Home</li>
+          <li class="main-nav-bar-items"><ion-icon name="notifications-outline"></ion-icon>Notifications</li>
+          <li class="main-nav-bar-items"><ion-icon name="hand"></ion-icon>Reminders</li>
+          <li class="main-nav-bar-items"><ion-icon name="contact"></ion-icon>Contact Us</li>
+        </ul>
+      </nav>
+      <div class="header__logo-box">
+        <img src="img/logo-white.png" alt="Logo" class="header__logo">
+      </div>
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Hustle</span>
+          <span class="heading-primary--sub">Procrastination is opportunity’s assassin</span>
+        </h1>
+        
+        <a href="#" class="btn btn--white btn--animated btn--click">get sh*t done</a>
+      </div>
+      </header>
+          <div id="top-bar">
+            <!-- <ul class="top-bar-left">
+              
+            </ul> -->
+            <div id="top-bar-inner">
+              <ul class="top-bar-right">
+                <!-- <li class="top-bar-right-item" id="list"><ion-icon name="list"></ion-icon></li> -->
+                <li class="top-bar-right-item"><ion-icon name="add"></ion-icon></li>
+                <li class="top-bar-right-item"><ion-icon name="checkmark-circle-outline"></ion-icon></li>
+                <li class="top-bar-right-item"><ion-icon name="notifications-outline"></ion-icon></li>
+                <li class="top-bar-right-item"><ion-icon name="settings"></ion-icon></li>
+              </ul>
+            </div>
+          </div>
+      <div class="container todo-feed">
 
-  <input type="text" class="user-input-title" placeholder="Enter the Title">
-  <textarea class="user-input-body" placeholder="Enter the body of text"></textarea>
+        <div class="row">
+          <div class="col-1-of-2 profile-section">
+            <ul >
+              <div id="left-nav">
+                <li class="main"><ion-icon name="home"></ion-icon>Home</li>
+                <li class="main"><ion-icon name="calendar"></ion-icon>Today</li>
+                <li class="main"><ion-icon name="browsers"></ion-icon>Next Week</li>
+                <li class="main last">Projects<ion-icon name="add"></ion-icon></li>
+             
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon>Personal</li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon>Shopping</li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon>School</li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon>Errends</li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon>Other</li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon>Add Task</li>
+            </ul>
+          </div>
+          <div class="col-2-of-2 todo-col ">
+            <div class="input-form">
+              
+                <button class="btn add-text-btn btn-text">Add Task</button><br> 
+              <table>
+                <td><input type="text" class="form  user-input-title" placeholder="task"></td>
 
-  <button class="add-text-btn">add text</button>
-  <button class="del-text-btn">delete text</button>
+                <td><textarea class="form user-input-body" placeholder="task"></textarea></td>
+              </table>
+            </div>
+            
+            <!-- <button class="del-text-btn">delete text</button> -->
+            
+              <div class="feed">
+                <div class="todo-box">
 
-  <div class="display"></div>
-  </body>
-</html>
+
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      </body>
+

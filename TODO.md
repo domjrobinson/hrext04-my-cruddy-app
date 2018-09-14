@@ -46,9 +46,7 @@
 
   (7) add option to select due date 
   (5) Style the format each todo shall have when displayed 
-  (6) Filter by item categories
   (6) delete item confirmation
-  (5) category pages (not really pages, just a show/hide trick)
   (1) strike-through completed/deleted items (styling)
   
 
@@ -56,7 +54,7 @@
 
 
 
-
+background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 
 
 

@@ -1,0 +1,94 @@
+#nav-bar-main{
+    font-size: 1.6rem;
+    float: right; 
+    text-decoration: none !important;
+     display: inline-block;
+     color: $color-white;
+     padding-top: 2rem;
+
+}
+.main-nav-bar-items {
+    display: inline;
+    width: 100px;
+    margin-right: 20px;
+    letter-spacing: 2px;
+    text-decoration: none; 
+    
+
+     &__:visited {
+        text-decoration: none;  
+     }
+    
+ }
+
+ #left-nav {
+     text-decoration: none;
+     list-style:none;
+     height: 126px;
+ 
+ }
+ 
+ .main{
+    margin: 0;
+    padding: 0;
+    padding-top: 24px;
+    font-size: 14px;
+    padding: 8px 16px 9px 4px;
+    text-align: left;
+
+ }
+
+ .last {
+    border-bottom: 1px solid #f1f1f1;
+ }
+
+ ion-icon {
+    width: 24px !important;
+    height: 24px !important;
+    justify-content: center !important;
+    display: inline-block;
+    width: 160px;
+    vertical-align: top;
+    margin-right: 10px;
+    
+ }
+
+#top-bar {
+    height: 43px;
+    background-color: #fff;
+    top: 0;
+    // position: absolute;
+    z-index: 200;
+    width: 100vw !important;
+    border-bottom: solid 1px #ca2100;
+    background-color: #db4c3f;
+    -webkit-transition: height 200ms ease-in;
+    transition: height 200ms ease-in;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15)
+}
+
+#top-bar-inner {
+    
+    max-width: 950px;
+    height: 100%;
+    display: block;
+    margin-left: 230px;
+}
+
+.top-bar-right {
+    float: right;
+}
+
+.top-bar-right-item {
+    border: 0;
+    float: left;
+    
+    height: 100%;
+    // white-space: nowrap !important;
+    text-decoration: none;
+    list-style: none;
+    display: block;
+    padding: 12px 38px 0 17px;
+    color: $color-white;
+}

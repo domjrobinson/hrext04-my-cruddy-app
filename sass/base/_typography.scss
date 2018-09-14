@@ -1,0 +1,45 @@
+body {
+    // font-family: "Lato", sans-serif; /* fonts should be defined in body and are inheritted by the children of the body*/
+    // font-weight: 400;
+    /* font-size: 16px; */
+    line-height: 1.7; /* will be 1.7 times the standards height*/
+    // color:$color-grey-dark;
+    // padding: 3rem;
+
+    box-sizing: border-box; /* changes box model so border and padding are not added */
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden; /*keeps animations from*/
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    
+        /*
+        animation-delay: 3s; waits speciffied amount of seconds 
+        animation-iteration-count: 3; repeats speciffied number of times
+        */
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+
+
+        animation: moveInRight 1s ease-out; /*short-hand code for same thing on lines 66 - 68*/
+
+    }
+}

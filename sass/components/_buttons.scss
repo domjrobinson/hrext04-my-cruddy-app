@@ -1,0 +1,104 @@
+.btn {
+    &:link,
+    &:visited { /* link is a psuedoclass, used to style elements on a special condition.  */
+        text-transform: uppercase;
+        text-decoration: none;
+        display: inline-block;
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        transition: all .2s; 
+        position: relative;
+        font-size: $default-font-size;
+
+    &:hover {
+        transform: translateY(-3px); /*to move up use negitive values*/
+        box-shadow: 0 1rem 2rem rgba($color-black,.2); /*offset in x direction, Offset Y direction, blur */
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 2rem rgba($color-black,.2);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        padding: 1.5rem 4rem; /*Order: top, bottom, right, left*/
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &::after { /*psedoelements*/
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; /*defines position of the elements if they one on top of another */
+        transition: all .4s;
+    }
+
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards; /* automatically applies styles at 0, (i.e. you won't see the button */
+    }
+}
+    // .btn-text {
+    //     &:link,
+    //     &:visited  {
+    //         font-size: $default-font-size;
+    //         color: $color-primary;
+    //         display: inline-block;
+    //         text-decoration: none;
+    //         border-bottom: 1px solid $color-primary;
+    //         padding: 3px;
+    //         animation: all .2s;
+    //     } 
+
+    //     &:hover {
+    //         background-color: $color-primary;
+    //         color: $color-white;
+    //         box-shadow: 0 1rem 2rem rgba($color-black,.15);
+    //         transform: translateY(-2px);
+    //     }
+
+    //     &:active {
+    //         box-shadow: 0 .5rem 21rem rgba($color-black,.15);
+    //         transform: translateY(0); 
+    //     }
+    // }
+
+    .add-text-btn {
+        background: 0;
+        background-color: #db4c3f;
+        color: #fff !important;
+        text-shadow: none;
+        border: 1px solid transparent;
+
+        font-weight: bold;
+        font-size: 13px !important;
+        line-height: 17px;
+        text-decoration: none;
+        padding: 6px 12px 7px 12px;
+        position: relative;
+        display: inline-block;
+        // text-shadow: 0 1px 0 #fff;
+        // background: #f3f3f3;
+        white-space: nowrap;
+        // border: solid 1px #ddd;
+        // background: linear-gradient(linear,0 40%,0 70%,from(#f3f3f3),to(#f1f1f1));
+        border-radius: 3px !important;        text-decoration: none !important;
+        text-align: center;
+        padding-bottom: 2px;
+    }

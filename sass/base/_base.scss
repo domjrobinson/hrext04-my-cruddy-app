@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before { /* universial selector  */
+    margin: 0; 
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html { 
+    font-size: 62.5%; /* This defines what 1 rem should be */
+}
+
+body {
+    box-sizing: border-box; /* changes box model so border and padding are not added */
+}
+.container {
+    margin: 0;
+    padding-left: 255px;
+    box-sizing: inherit;
+}

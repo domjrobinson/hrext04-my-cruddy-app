@@ -1,65 +1,53 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
+    $('.btn--click').click(function(){
+        // alert('this button was clicked');
+        $('header').remove(); // will remove HTML & CSS
+        // $('.container').append('<p>Does this work</p>')
+    })
 
-  $(".add-text-btn").on("click", function(){
+    for (var key in localStorage) {
+        if (key !== "length" && key !== "key" && key !== "getItem" && key !== "setItem" && key !== "removeItem" && key !== "clear") {
+            let itemHtml = '<div class="display-item" data-storage-key="' + key + '"> ' + key + ' - ' + '<span class="description">' + localStorage.getItem(key) + '</span></div>';
+            $(itemHtml).appendTo(".feed");
+        }
+    }
 
-    // store values
-    let inputKey = $(".user-input-title").val();
-    let inputValue = $(".user-input-body").val();
+    $(".add-text-btn").on("click", function () {
 
-    // clear values
-    $(".user-input-title").val("");
-    $(".user-input-body").val("");
+        // store values from input boxes
+        let inputKey = $('.user-input-title').val();
+        let inputValue = $(".user-input-body").val();
 
-    console.log(inputKey, inputValue);
+        // clear values from input boxes
+        $(".user-input-title").val("");
+        $(".user-input-body").val("");
 
-    localStorage.setItem(inputKey, inputValue);
-    // data-
-    let itemHtml = '<div class="display-item" data-storage-key="'+inputKey+'"> ' + inputKey + ' ' +  localStorage.getItem(inputKey) + '</div>';
-    $(".display").html(itemHtml);
-    //console.log(localStorage);
-    // how can we delegate this event to the outer html node?
-    // https://learn.jquery.com/events/event-delegation/
+        // add new property to local storage from input boxes
+        localStorage.setItem(inputKey, inputValue);
 
-    $(".display-item").on("click", function(e){
-      // plop the key:value back into the input boxes
+        // add inputKey and inputValue to the #display container
+        let itemHtml = '<div class="display-item" data-storage-key="' + inputKey + '"> ' + inputKey + "  " + '<span class="description-name">' + localStorage.getItem(inputKey) + "</span></div>";
+        $(itemHtml).appendTo(".feed");
 
-      // get the values from the the divs?
-      console.log("key=> ", e.target.dataset.storageKey); // user-input-title
-      localStorage.getItem(e.target.dataset.storageKey); // user-input-body
-
-      // set those values in the form fields
-      $(".user-input-title").val(e.target.dataset.storageKey);
-      $(".user-input-body").val(localStorage.getItem(e.target.dataset.storageKey));
     });
 
-  });
+    $(".del-text-btn").on("click", function() {
+      window.confirm("Task deleted!"); // maybe change to a window.confirm
+      localStorage.removeItem($(".user-input-title").val()); // grab the title and plop here
+      $(".user-input-title").val("");
+      $(".user-input-body").val("");
+    });
 
-
-
-   // TODO add back in later
-   // $(".user-input").on("keyup", function(){
-   //   let inputValue = $(".user-input").val();
-   //   localStorage.setItem("testStorage", inputValue);
-   //   $(".display").text(localStorage.getItem("testStorage"));
-   // });
-
-   $(".del-text-btn").on("click", function() {
-     alert('item deleted? check the console'); // maybe change to a window.confirm
-     localStorage.removeItem( $('.user-input-title').val() ); // grab the title and plop here
-     $(".user-input-title").val("");
-     $(".user-input-body").val("");
-     // clearing display? what if I have multiple items?
-     // after item is removed from local storage, redisplay items from local storage
-     // refresh from storage?
-   });
-
-
-   // iterative approach to adding items
-   // store data as stringified array of objects
-   // store data with individual keys
-  // how do we get keys? research Object.keys
-
-
+    // clear local storage and refresh the #display container
+    $("#clear-all-btn").on("click", function () {
+        localStorage.clear();
+        $("#user-input-title").val("");
+        $("#user-input-body").val("");
+        $("#display").html("");
+    });
 
 });
+        
+
+

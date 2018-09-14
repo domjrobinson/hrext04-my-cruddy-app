@@ -1,0 +1,29 @@
+.header {
+    height: 100vh; /*should be at 95% of the viewport*/
+    background-image: linear-gradient(to right ,
+    rgba($color-primary-light, 0.8), 
+    rgba($color-primary-dark, 0.8)),
+    url(../img/better.jpg);
+    background-size: cover; /*cover: will try to fit the element inside the box*/
+    background-position: top; /*makes sure top of image stays at the top of the page*/
+    position: relative;
+
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left:4rem;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%; /* top & left refer to 40% of parent element*/
+        left: 50%;/* left & left refer to 50% of parent     element*/
+        transform: translate(-50%, -50%); /*keeps text-box in the middle(exactly in the middle) and keeps it respo  nsive*/
+        text-align: center;
+    }
+}   
+

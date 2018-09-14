@@ -1,0 +1,341 @@
+@keyframes moveInLeft {
+  0% {
+    /*where you want animation to start*/
+    opacity: 0;
+    transform: translateX(-10rem);
+    /*positive: goes to left, negitive: goes to right*/ }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    /*where you want the animation to end*/
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    /*where you want animation to start*/
+    opacity: 0;
+    transform: translateX(10rem);
+    /*positive: goes to left, negitive: goes to right*/ }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    /*where you want the animation to end*/
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    /*where you want animation to start*/
+    opacity: 0;
+    transform: translateY(3rem);
+    /*positive: goes to left, negitive: goes to right*/ }
+  100% {
+    /*where you want the animation to end*/
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  /* universial selector  */
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /* This defines what 1 rem should be */ }
+
+body {
+  box-sizing: border-box;
+  /* changes box model so border and padding are not added */ }
+
+.container {
+  margin: 0;
+  padding-left: 255px;
+  box-sizing: inherit; }
+
+body {
+  /* font-size: 16px; */
+  line-height: 1.7;
+  /* will be 1.7 times the standards height*/
+  box-sizing: border-box;
+  /* changes box model so border and padding are not added */ }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /*keeps animations from*/
+  margin-bottom: 6rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /*
+        animation-delay: 3s; waits speciffied amount of seconds 
+        animation-iteration-count: 3; repeats speciffied number of times
+        */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
+    animation: moveInRight 1s ease-out;
+    /*short-hand code for same thing on lines 66 - 68*/ }
+
+.btn:link, .btn:visited {
+  /* link is a psuedoclass, used to style elements on a special condition.  */
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1.5rem 4rem;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem; }
+  .btn:link:hover, .btn:visited:hover {
+    transform: translateY(-3px);
+    /*to move up use negitive values*/
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    /*offset in x direction, Offset Y direction, blur */ }
+    .btn:link:hover::after, .btn:visited:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+  padding: 1.5rem 4rem;
+  /*Order: top, bottom, right, left*/ }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn::after {
+  /*psedoelements*/
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /*defines position of the elements if they one on top of another */
+  transition: all .4s; }
+
+.btn--animated {
+  animation: moveInBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
+  /* automatically applies styles at 0, (i.e. you won't see the button */ }
+
+.add-text-btn {
+  background: 0;
+  background-color: #db4c3f;
+  color: #fff !important;
+  text-shadow: none;
+  border: 1px solid transparent;
+  font-weight: bold;
+  font-size: 13px !important;
+  line-height: 17px;
+  text-decoration: none;
+  padding: 6px 12px 7px 12px;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 3px !important;
+  text-decoration: none !important;
+  text-align: center;
+  padding-bottom: 2px; }
+
+table {
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  height: 37px;
+  width: 578px;
+  display: table;
+  box-shadow: none;
+  resize: none;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: italic;
+  outline: none;
+  margin-top: 12px;
+  padding: 15px; }
+
+input, textarea {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 15px; }
+
+.user-input-title {
+  padding: 2px; }
+
+.description-name {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+  display: inline; }
+
+textarea {
+  margin-top: 11px;
+  padding-left: 10px;
+  resize: none; }
+
+.display-item {
+  font-weight: 300;
+  margin-top: 11px;
+  padding: 20px 0px 11px 20px;
+  border-bottom: 1px outset #f0f0f0; }
+
+tbody {
+  padding: 15px; }
+
+.row {
+  box-sizing: border-box;
+  margin-left: 0 auto;
+  display: flex;
+  background-size: cover;
+  box-sizing: border-box; }
+  .row .col-1-of-2 {
+    float: left;
+    width: 265px;
+    padding-left: 30px;
+    padding-top: 50px;
+    position: relative;
+    border-right: 1.5px solid #f1f1f1;
+    background-color: #f1f1f1; }
+  .row .col-2-of-2 {
+    height: 95vh;
+    vertical-align: top;
+    width: 640px;
+    padding: 6px 25px 12px 30px;
+    padding-top: 80px !important;
+    padding-bottom: 85px !important; }
+
+.header {
+  height: 100vh;
+  /*should be at 95% of the viewport*/
+  background-image: linear-gradient(to right, rgba(37, 117, 252, 0.8), rgba(40, 180, 133, 0.8)), url(../img/better.jpg);
+  background-size: cover;
+  /*cover: will try to fit the element inside the box*/
+  background-position: top;
+  /*makes sure top of image stays at the top of the page*/
+  position: relative; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    /* top & left refer to 40% of parent element*/
+    left: 50%;
+    /* left & left refer to 50% of parent     element*/
+    transform: translate(-50%, -50%);
+    /*keeps text-box in the middle(exactly in the middle) and keeps it respo  nsive*/
+    text-align: center; }
+
+#nav-bar-main {
+  font-size: 1.6rem;
+  float: right;
+  text-decoration: none !important;
+  display: inline-block;
+  color: #fff;
+  padding-top: 2rem; }
+
+.main-nav-bar-items {
+  display: inline;
+  width: 100px;
+  margin-right: 20px;
+  letter-spacing: 2px;
+  text-decoration: none; }
+  .main-nav-bar-items__:visited {
+    text-decoration: none; }
+
+#left-nav {
+  text-decoration: none;
+  list-style: none;
+  height: 126px; }
+
+.main {
+  margin: 0;
+  padding: 0;
+  padding-top: 24px;
+  font-size: 14px;
+  padding: 8px 16px 9px 4px;
+  text-align: left; }
+
+.last {
+  border-bottom: 1px solid #f1f1f1; }
+
+ion-icon {
+  width: 24px !important;
+  height: 24px !important;
+  justify-content: center !important;
+  display: inline-block;
+  width: 160px;
+  vertical-align: top;
+  margin-right: 10px; }
+
+#top-bar {
+  height: 43px;
+  background-color: #fff;
+  top: 0;
+  z-index: 200;
+  width: 100vw !important;
+  border-bottom: solid 1px #ca2100;
+  background-color: #db4c3f;
+  -webkit-transition: height 200ms ease-in;
+  transition: height 200ms ease-in;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); }
+
+#top-bar-inner {
+  max-width: 950px;
+  height: 100%;
+  display: block;
+  margin-left: 230px; }
+
+.top-bar-right {
+  float: right; }
+
+.top-bar-right-item {
+  border: 0;
+  float: left;
+  height: 100%;
+  text-decoration: none;
+  list-style: none;
+  display: block;
+  padding: 12px 38px 0 17px;
+  color: #fff; }
+
+.container {
+  background-color: #f1f1f1; }
+
+.profile-section {
+  height: 95vh;
+  padding: 25rem 0;
+  background-color: #fafafa;
+  border-right: solid 1px black; }
+
+.todo-col {
+  height: 95vh;
+  background-color: #f7f7f7; }

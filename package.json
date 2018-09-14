@@ -1,0 +1,22 @@
+{
+  "name": "hrext04-my-cruddy-app",
+  "version": "1.0.0",
+  "description": "A basic CRUD app built on the front end only",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/app.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domjrobinson/hrext04-my-cruddy-app.git"
+  },
+  "author": "dom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/domjrobinson/hrext04-my-cruddy-app/issues"
+  },
+  "homepage": "https://github.com/domjrobinson/hrext04-my-cruddy-app#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
