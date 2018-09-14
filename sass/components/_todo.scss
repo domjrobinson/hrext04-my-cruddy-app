@@ -1,57 +1,168 @@
+form {
+    margin-top: 6px;
+}
+
+td {
+    vertical-align: top;
+    // display: table-cell;
+}
+
+.form_content table {
+    // width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 1px 50px;
+    align-content: center;
+}
+
 table {
-//     background-color: #FFFF;
-// 	height: auto; 
-//     margin: auto;
-//     width: 50%;
-//     border: 1.5px solid lightgray;
-//     border-radius: 100px;
-//     padding: 10px;
-     background-color: transparent;
-        font-family: 'Roboto', sans-serif;
-        height: 37px;
-        width: 578px;
-        display: table;
-        box-shadow: none;
-        resize: none;
-        width: 100%;
-        border: 1px solid #ddd;
-        border-radius: 3px;
-        font-size: 16px;
-        font-weight: 300;
-        font-style: italic;
-        outline: none;
-        margin-top: 12px;
-        padding: 15px;
-   
-        
+    // display: table;
+    // border-collapse: separate;
+    border-spacing: 2px;
+    border-color: grey;
 }
 
-input, textarea {
-     background-color: transparent;
-     box-shadow: none;
-     border: none;
-     outline: none;
-     font-size: 15px;     
+tbody {
+    // display: table-row-group;
+    // vertical-align: middle;
+    // border-color: inherit;
 }
 
-.user-input-title {
-    padding: 2px;
+.text-box {
+    // padding: 6px;
+    display: inline-block;
 }
 
+.text-placeholder {
+    vertical-align: middle;
+    // padding: 0 !important;
+    display: inline-block;
+    font-family: "Roboto", Helvetica;
+    font-size: 14px;
+    color: #ccc;
+    // padding: 6px 6px 0 6px;
+    outline: 0;
+    overflow-x: hidden;
+    // white-space: nowrap;
+    z-index: 5;
+    // min-height: inherit;
+    line-height: 30px;
+    float: right;
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    border: 0;
+    font-weight: 100;
+    // width: 100%;
+}
 
-.description-name {
+.placeholder {
+    font-size: 16px;
+}
+// ---------
+
+.select-duedate {
+        // width: 110px;
+}
+
+td {
+    vertical-align: top;
+    height: 100%;
+
+}
+
+.date {
+    // width: 85px;
+    float: right;
+    // background-color: transparent;
+    // font-weight: 100;
+}
+
+.form_content.input {
+    font-size: 14px;
+    // min-height: 21px;
+}
+
+.date-holder.input {
+    // border-left: 
+    padding: 0 6px;
+    padding-top: 3px;
+    opacity: .5;
+
+}
+
+.date {
+    // resize: none;
+    // padding: 6px 6px 0 6px;
+    // outline: 0;
+    // font-size: 13px !important;
+    // border-left: 1px solid lightgray;
+    // box-shadow: none;   
+    // padding: 0;
+    // margin-right: 4px;
+}
+ input{
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 0em;
+ }
+
+
+td input {
+     widows: 100%;
+ }
+// table {
+//     background-color: transparent;
+//     font-family: 'Roboto', sans-serif;
+//     height: 37px;
+//     width: 578px;
+//     display: table;
+//     box-shadow: none;
+//     resize: none;
+//     width: 100%;
+//     border: 1px solid #ddd;
+//     border-radius: 3px;
+//     font-size: 16px;
+//     font-weight: 300;
+//     font-style: italic;
+//     outline: none;
+//     margin-top: 12px;
+//     padding: 15px; 
+// }
+
+// input, textarea {
+//      background-color: transparent;
+//      box-shadow: none;
+//      border: none;
+//      outline: none;
+//      font-size: 15px;     
+// }
+
+// .user-input-title {
+//     padding: 2px;
+// }
+
+
+.description-name, .description {
     font-size: 14px;
     line-height: 18px;
     text-align: left;
     display: inline;
 }
 
-textarea {
-    margin-top: 11px;
-    padding-left: 10px;
-    resize: none;
-    // justify-content: left;
-}
+// textarea {
+//     margin-top: 11px;
+//     padding-left: 10px;
+//     resize: none;
+//     // justify-content: left;
+// }
 
 .display-item {
     font-weight: 300 ;
@@ -60,6 +171,25 @@ textarea {
     border-bottom: 1px outset #f0f0f0;
 }
 
+.display-item ion-icon {
+    // width: 24px !important;
+    height: 20px !important;
+    justify-content: center !important;
+    // display: inline-block;
+    // width: 160px;
+    // vertical-align: top;
+    // margin-right: 10px;
+    color: grey;
+
+
+ }
+
+.trash {
+        float: right;
+        // border: none;
+        background-color: transparent;
+        // outline: none;
+    }
 tbody {
     padding: 15px;
 }

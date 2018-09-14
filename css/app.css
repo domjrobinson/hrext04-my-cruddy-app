@@ -89,57 +89,60 @@ body {
     animation: moveInRight 1s ease-out;
     /*short-hand code for same thing on lines 66 - 68*/ }
 
-.btn:link, .btn:visited {
-  /* link is a psuedoclass, used to style elements on a special condition.  */
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 1.5rem 4rem;
-  border-radius: 10rem;
-  transition: all .2s;
-  position: relative;
-  font-size: 1.6rem; }
-  .btn:link:hover, .btn:visited:hover {
-    transform: translateY(-3px);
-    /*to move up use negitive values*/
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    /*offset in x direction, Offset Y direction, blur */ }
-    .btn:link:hover::after, .btn:visited:hover::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0; }
-
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); }
-
-.btn--white {
+.btn-main {
   background-color: #fff;
+  text-decoration: none;
   color: #777;
-  padding: 1.5rem 4rem;
-  /*Order: top, bottom, right, left*/ }
-  .btn--white::after {
-    background-color: #fff; }
-
-.btn::after {
-  /*psedoelements*/
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  /*defines position of the elements if they one on top of another */
-  transition: all .4s; }
-
-.btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards;
-  /* automatically applies styles at 0, (i.e. you won't see the button */ }
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
+  .btn-main:link, .btn-main:visited {
+    /* link is a psuedoclass, used to style elements on a special condition.  */
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem; }
+    .btn-main:link:hover, .btn-main:visited:hover {
+      transform: translateY(-3px);
+      /*to move up use negitive values*/
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      /*offset in x direction, Offset Y direction, blur */ }
+      .btn-main:link:hover::after, .btn-main:visited:hover::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0; }
+  .btn-main:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn-main--white {
+    background-color: #fff;
+    color: #777;
+    padding: 1.5rem 4rem;
+    /*Order: top, bottom, right, left*/ }
+    .btn-main--white::after {
+      background-color: #fff; }
+  .btn-main::after {
+    /*psedoelements*/
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /*defines position of the elements if they one on top of another */
+    transition: all .4s; }
+  .btn-main--animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+    /* automatically applies styles at 0, (i.e. you won't see the button */ }
 
-.add-text-btn {
+.btn {
   background: 0;
   background-color: #db4c3f;
   color: #fff !important;
@@ -158,50 +161,98 @@ body {
   text-align: center;
   padding-bottom: 2px; }
 
-table {
-  background-color: transparent;
-  font-family: 'Roboto', sans-serif;
-  height: 37px;
-  width: 578px;
-  display: table;
-  box-shadow: none;
-  resize: none;
-  width: 100%;
+button:focus {
+  outline: 0; }
+
+form {
+  margin-top: 6px; }
+
+td {
+  vertical-align: top; }
+
+.form_content table {
   border: 1px solid #ddd;
   border-radius: 3px;
-  font-size: 16px;
-  font-weight: 300;
-  font-style: italic;
-  outline: none;
-  margin-top: 12px;
-  padding: 15px; }
+  padding: 1px 50px;
+  align-content: center; }
 
-input, textarea {
+table {
+  border-spacing: 2px;
+  border-color: grey; }
+
+.text-box {
+  display: inline-block; }
+
+.text-placeholder {
+  vertical-align: middle;
+  display: inline-block;
+  font-family: "Roboto", Helvetica;
+  font-size: 14px;
+  color: #ccc;
+  outline: 0;
+  overflow-x: hidden;
+  z-index: 5;
+  line-height: 30px;
+  float: right;
   background-color: transparent;
   box-shadow: none;
-  border: none;
   outline: none;
-  font-size: 15px; }
+  border: 0;
+  font-weight: 100; }
 
-.user-input-title {
-  padding: 2px; }
+.placeholder {
+  font-size: 16px; }
 
-.description-name {
+td {
+  vertical-align: top;
+  height: 100%; }
+
+.date {
+  float: right; }
+
+.form_content.input {
+  font-size: 14px; }
+
+.date-holder.input {
+  padding: 0 6px;
+  padding-top: 3px;
+  opacity: .5; }
+
+input {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em; }
+
+td input {
+  widows: 100%; }
+
+.description-name, .description {
   font-size: 14px;
   line-height: 18px;
   text-align: left;
   display: inline; }
-
-textarea {
-  margin-top: 11px;
-  padding-left: 10px;
-  resize: none; }
 
 .display-item {
   font-weight: 300;
   margin-top: 11px;
   padding: 20px 0px 11px 20px;
   border-bottom: 1px outset #f0f0f0; }
+
+.display-item ion-icon {
+  height: 20px !important;
+  justify-content: center !important;
+  color: grey; }
+
+.trash {
+  float: right;
+  background-color: transparent; }
 
 tbody {
   padding: 15px; }
@@ -226,7 +277,8 @@ tbody {
     width: 640px;
     padding: 6px 25px 12px 30px;
     padding-top: 80px !important;
-    padding-bottom: 85px !important; }
+    padding-bottom: 85px !important;
+    overflow: scroll; }
 
 .header {
   height: 100vh;
@@ -281,7 +333,8 @@ tbody {
   padding-top: 24px;
   font-size: 14px;
   padding: 8px 16px 9px 4px;
-  text-align: left; }
+  text-align: left;
+  letter-spacing: 1px; }
 
 .last {
   border-bottom: 1px solid #f1f1f1; }
@@ -301,8 +354,8 @@ ion-icon {
   top: 0;
   z-index: 200;
   width: 100vw !important;
-  border-bottom: solid 1px #ca2100;
-  background-color: #db4c3f;
+  border-bottom: solid 1px white;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   -webkit-transition: height 200ms ease-in;
   transition: height 200ms ease-in;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
@@ -327,6 +380,23 @@ ion-icon {
   padding: 12px 38px 0 17px;
   color: #fff; }
 
+.sort {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  letter-spacing: 1px;
+  border: none;
+  background-color: transparent;
+  font-size: 14px;
+  outline: 0; }
+  .sort:hover {
+    background-color: #db4c3f;
+    border: 1px solid transparent;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 6px 12px 7px 12px; }
+
 .container {
   background-color: #f1f1f1; }
 
@@ -339,3 +409,7 @@ ion-icon {
 .todo-col {
   height: 95vh;
   background-color: #f7f7f7; }
+
+.home-btn li {
+  display: inline-block;
+  outline: 0; }

@@ -1,4 +1,11 @@
-.btn {
+.btn-main {
+    background-color: $color-white;
+    text-decoration: none;
+    color: $color-grey-dark;
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
     &:link,
     &:visited { /* link is a psuedoclass, used to style elements on a special condition.  */
         text-transform: uppercase;
@@ -79,7 +86,7 @@
     //     }
     // }
 
-    .add-text-btn {
+    .btn {
         background: 0;
         background-color: #db4c3f;
         color: #fff !important;
@@ -98,7 +105,10 @@
         white-space: nowrap;
         // border: solid 1px #ddd;
         // background: linear-gradient(linear,0 40%,0 70%,from(#f3f3f3),to(#f1f1f1));
-        border-radius: 3px !important;        text-decoration: none !important;
+        border-radius: 3px !important;       
+         text-decoration: none !important;
         text-align: center;
         padding-bottom: 2px;
     }
+
+    button:focus {outline:0;}

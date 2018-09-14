@@ -31,9 +31,10 @@
           <span class="heading-primary--sub">Procrastination is opportunity’s assassin</span>
         </h1>
         
-        <a href="#" class="btn btn--white btn--animated btn--click">get sh*t done</a>
+        <a href="#" class="btn-main btn--white btn--animated btn--click">get sh*t done</a>
       </div>
       </header>
+      <main>
           <div id="top-bar">
             <!-- <ul class="top-bar-left">
               
@@ -48,6 +49,8 @@
               </ul>
             </div>
           </div>
+
+    
       <div class="container todo-feed">
 
         <div class="row">
@@ -59,23 +62,43 @@
                 <li class="main"><ion-icon name="browsers"></ion-icon>Next Week</li>
                 <li class="main last">Projects<ion-icon name="add"></ion-icon></li>
              
-              <li class="main"><ion-icon name="radio-button-off"></ion-icon>Personal</li>
-              <li class="main"><ion-icon name="radio-button-off"></ion-icon>Shopping</li>
-              <li class="main"><ion-icon name="radio-button-off"></ion-icon>School</li>
-              <li class="main"><ion-icon name="radio-button-off"></ion-icon>Errends</li>
-              <li class="main"><ion-icon name="radio-button-off"></ion-icon>Other</li>
-              <li class="main"><ion-icon name="radio-button-off"></ion-icon>Add Task</li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon><button class="sort per">Personal</button></li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon><button class="sort shop">Shopping</button></li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon><button class="sort sch">School</button><li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon><button class="sort err">Errends</button></li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon><button class="sort oth">Other</button><li>
+              <li class="main"><ion-icon name="radio-button-off"></ion-icon><button class="sort">Add Task</button></li>
             </ul>
           </div>
           <div class="col-2-of-2 todo-col ">
             <div class="input-form">
               
-                <button class="btn add-text-btn btn-text">Add Task</button><br> 
+                <ul class="home-btn">
+                <li><button class="btn add-text-btn btn-text">Add Task</button><br> </li>
+                <li><button class="btn  delete-task">Delete All Task</button></li>
+                </ul>
+               
+                <form>
               <table>
-                <td><input type="text" class="form  user-input-title" placeholder="task"></td>
-
-                <td><textarea class="form user-input-body" placeholder="task"></textarea></td>
+                <tbody>
+                  <tr>
+                <td colespan="2" class="form_content">
+                  <table>
+                    <tbody>
+                      <tr class="text-box">
+                        <td >
+                           <input class="text-placeholder user-input-body" style="width: 300px;" placeholder="e.g. study for self assesment">
+                        </td>
+                        <td class="date-holder">
+                          <input type="text" class="text-placeholder select-duedate user-input-title" placeholder="Label">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </tr>
+                </tbody>
               </table>
+              </form>
             </div>
             
             <!-- <button class="del-text-btn">delete text</button> -->
@@ -89,5 +112,11 @@
           </div>
         </div>
       </div>
+      </main>
       </body>
 
+
+
+      <!-- <input type="text" class="form  user-input-title" placeholder="task"></td>
+      
+      <td><textarea class="form user-input-body" placeholder="task"></textarea></td> -->
